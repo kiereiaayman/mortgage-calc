@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bde3f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .calc {
+    padding: 24px;
+    background-color: #fff;
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .res {
+    background-color: #052234;
+    padding: 24px;
+    padding-top: 100px;
+    border-radius: 0px 15px 15px 70px;
+    color: white;
+    flex: 1;
+  }
+
+  .res-show{
+    background-color: #052234;
+    padding: 24px;
+    padding-top: 10px;
+    border-radius: 0px 15px 15px 70px;
+    color: white;
+    flex: 1;
+  }
+
+  label,small{
+    color: #708b9c;
+    font-size: small;
+  }
+  
+  .row-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .clear-all {
+    color: #0073e6;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .input-field {
+    margin-top: 16px;
+    width:95%;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 20px;
+    width: 95%;
+  }
+
+  
+  
+  .label {
+    margin-bottom: 8px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #415665;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .mortgage-type {
+    margin-top: 24px;
+  }
+  
+  .radio-field {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #415665;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  .radio-field.checked{
+    background-color: #d2d85a16;
+    border-color: #d1d85a;
+    border-style: solid;
+    border-width: 3px;
+    outline: none;
+  }
+
+  #radio{
+    color: #052234;
+    font-weight: bold;
+  }
+  
+  .radio-field input {
+    margin-right: 8px;
+  }
+
+  input[type='radio'] {
+    accent-color:#d1d85a /* Your desired color */
+  }
+
+  
+  .calculate-button {
+    margin-top: 24px;
+    width: 80%;
+    padding: 12px;
+    background-color: #d1d85a;
+    color:#052234;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .result-instruction {
+    text-align: center;
+  }
+  .result-instruction-hidden{
+    display: none;
+  }
+  
+  .result {
+    display:none;
+  }
+  
+  
+  .result-card {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #ccd6dd;
+    border-radius: 8px;
+  }
+
+  .result-image {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 16px;
+  }
+  
+  .result-card p {
+    margin: 0;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccd6dd;
+    margin: 16px 0;
+  }
+
+  .input-container {
+    position: relative;
+  }
+  
+  .input-prefix {
+    position: absolute;
+    left: 0.5px;
+    top: 40%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #555;
+    background-color: #bde3f4;
+    pointer-events: none; /* Prevent interaction with the span */
+    padding: 8.9px;
+    border-radius: 4px 0px 0px 4px;
+  }
+  
+  .input-suffix {
+    position: absolute;
+    right: 0.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #555;
+    background-color:#bde3f4;
+    pointer-events: none;
+    padding: 8.9px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px; /* Adjust padding to fit the £ sign */
+    padding-right: 25px; /* Adjust padding to fit the % sign */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="text"]:focus, input[type="text"]:active{
+    border-style: solid;
+    border-color: #d1d85a;
+    outline: none;
+    background-color: white;
+    border-width: 3px;
+  }
+
+  .input-prefix.focused {
+    background-color:#d1d85a; /* Color when input is focused */
+  }
+  .input-suffix.focused {
+    background-color:#d1d85a; /* Color when input is focused */
+  }
+  
+  .result-show {
+    background-color: #052234; /* Dark blue background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    color: #ffffff; /* White text color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.result-show h4 {
+    font-size: 1.5rem; /* Slightly larger font for the heading */
+    font-weight: 600; /* Bold font */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.result-show p {
+    font-size: 1rem; /* Standard font size for the paragraph */
+    margin: 10px 0; /* Margin above and below the paragraph */
+    color: #708b9c;
+}
+
+.result-card {
+    border-top: #d1d85a;
+    background-color: #0d1f27; /* Slightly darker background for the result card */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px; /* Space above the result card */
+}
+
+.result-card p {
+    margin: 5px 0; /* Margin for the paragraphs inside the result card */
+}
+
+.result-card hr {
+    border: 1px solid #1e5167; /* A subtle horizontal line separating the content */
+    margin: 15px 0; /* Space above and below the horizontal line */
+}
+
+#monthly{
+  font-size:xxx-large;
+  color: #d1d85a;
+}
+#total{
+  font-size: x-large;
+  color: white;
+}
