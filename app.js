@@ -33,16 +33,6 @@ const input3 = document.getElementById('rate');
 const suffix2 = document.getElementById('logo3');
 
 
-document.getElementById("clear").addEventListener('click',()=>{
-    document.querySelectorAll('input').forEach(input => {
-        input.value = '';
-        if (input.type === 'checkbox' || input.type === 'radio') {
-            input.checked = false;
-        }
-    });
-})
-
-
 input1.addEventListener('focus', () => {
     prefix.classList.add('focused');
 });
@@ -77,3 +67,6 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => {
     });
   });
   
+  document.getElementById("clear").addEventListener('click',()=>{
+    location.reload();
+})
